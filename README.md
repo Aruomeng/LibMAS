@@ -34,13 +34,13 @@ flowchart LR
 ```mermaid
 flowchart LR
     user["用户与浏览器"] -->|提交任务| app["网页界面 app.py"]
-    app -->|调用工作流| graph["LangGraph 编排 main.py"]
-    graph -->|读取样例| demo["离线演示数据"]
-    graph -->|实时检索| crossref["Crossref API"]
-    graph -->|语义处理| deepseek["DeepSeek API"]
-    graph -->|返回状态与结果| app
+    app -->|调用工作流| workflow["LangGraph 编排 main.py"]
+    workflow -->|读取样例| demo["离线演示数据"]
+    workflow -->|实时检索| crossref["Crossref API"]
+    workflow -->|语义处理| deepseek["DeepSeek API"]
+    workflow -->|返回状态与结果| app
     app -->|展示推荐与运行状态| user
-    cli["命令行入口"] -->|共用工作流| graph
+    cli["命令行入口"] -->|共用工作流| workflow
 ```
 
 - `main.py` 定义“做什么”：需求状态结构、Agent 节点职责、节点之间的依赖/并行关系、离线规则与可选 LLM 调用，以及命令行入口。
