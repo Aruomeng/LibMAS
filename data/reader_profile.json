@@ -1,0 +1,6 @@
+{
+  "profile_id": "DEMO-READER-01",
+  "read_item_ids": ["DEMO-005"],
+  "interest_keywords": ["多智能体协同", "智慧图书馆", "信息推荐", "服务编排"],
+  "note": "演示画像；请勿当作真实用户数据"
+}
